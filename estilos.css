@@ -1,4 +1,4 @@
-/* CSS DOCUMENT */
+
 @charset "UTF-8";
 
 /* ================= VARIABLES ================= */
@@ -106,6 +106,7 @@ img {
   position: relative;
   height: 934px;
   overflow: hidden;
+  padding-bottom: 90px;
 }
 
 .hero-img {
@@ -140,13 +141,12 @@ img {
   z-index: 2;
 }
 
-/* Contenedor del cuadro + botón, debajo y a la derecha */
 .hero-caja {
   position: absolute;
-  top: 50%;
+  bottom: 90px;
   right: 6%;
-  width: 31%;
-  min-width: 300px;
+  width: 28%;
+  min-width: 260px;
   z-index: 2;
   display: flex;
   flex-direction: column;
@@ -157,10 +157,10 @@ img {
   width: 100%;
   background: #e0dedb;
   color: var(--negro);
-  padding: 56px 64px;
-  border-radius: 40px;
-  font-size: clamp(0.85rem, 1.2vw, 1.15rem);
-  line-height: 1.9;
+  padding: 36px 44px;
+  border-radius: 30px;
+  font-size: clamp(0.7rem, 0.95vw, 0.95rem);
+  line-height: 1.7;
 }
 
 .hero-texto p {
@@ -168,11 +168,11 @@ img {
 }
 
 .hero-boton {
-  margin-top: 56px;
-  font-size: clamp(0.85rem, 1.1vw, 1.05rem);
-  padding: 20px 40px;
-  letter-spacing: 2px;
-}
+  margin-top: 28px;
+  font-size: clamp(0.65rem, 0.85vw, 0.85rem);
+  padding: 16px 36px;
+  letter-spacing: 1.5px;
+  }
 
 /* ================= BOTONES ================= */
 .btn {
@@ -190,9 +190,9 @@ img {
 }
 
 .btn:hover {
-  background: var(--naranja);
-  border-color: var(--naranja);
-  color: var(--negro);
+  background: transparent;
+  border: 1px solid var(--blanco);
+  color: var(--blanco);
 }
 
 .btn-verde {
@@ -211,7 +211,6 @@ img {
   display: none; 
 }
 
-/* Botón debajo del cuadro de texto */
 .hero-texto > .btn {
   display: inline-block;
   position: static;
@@ -249,33 +248,37 @@ img {
 
 /* ================= ARCHIVO VISUAL ================= */
 .archivo {
-  padding: 90px 10% 80px;
+  padding: 90px 12.5% 80px;
   position: relative;
 }
 
 .eyebrow {
   color: var(--verde);
-  font-size: 0.55rem;
-  text-transform: uppercase;
-  margin-bottom: 12px;
+  font-size: 0.6rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 14px;
 }
 
 .titulo-seccion {
   font-family: var(--fuente-marca);
   font-weight: 800;
-  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  font-size: clamp(2.8rem, 5vw, 5.5rem);
+  line-height: 1;
   color: var(--crema);
-  margin-bottom: 20px;
+  text-shadow: 5px 5px 0 var(--naranja);
+  margin-bottom: 40px;
 }
 
 .punto {
   color: var(--verde);
+  text-shadow: none;
 }
 
 .descripcion {
-  font-size: 0.6rem;
-  line-height: 1.8;
-  max-width: 900px;
+  font-size: clamp(0.75rem, 0.9vw, 0.95rem);
+  line-height: 1.5;
+  color: var(--crema);
+  max-width: 80%;
   margin-bottom: 60px;
 }
 
@@ -299,7 +302,7 @@ img {
 
 /* ================= LOGOS ================= */
 .logos {
-  padding: 60px 10% 100px;
+  padding: 60px 12.5% 100px;
 }
 
 .logos-fila {
@@ -333,34 +336,44 @@ img {
 
 /* ================= CONTACTO / CTA ================= */
 .cta {
-  padding: 120px 10% 140px;
+  padding: 120px 12.5% 140px;
 }
 
 .cta-titulo {
   font-family: var(--fuente-marca);
   font-weight: 800;
-  font-size: clamp(2.5rem, 7vw, 5.5rem);
+  font-size: clamp(3rem, 9vw, 7.5rem);
   line-height: 1;
   color: var(--crema);
-  margin-bottom: 30px;
-}
-
-.cta-titulo span {
-  color: var(--verde);
-}
-
-.cta-texto {
-  font-size: 0.55rem;
-  line-height: 1.8;
   margin-bottom: 40px;
 }
 
+
+.cta-titulo span {
+  display: block;
+  color: var(--verde);
+  text-shadow: -6px 6px 0 var(--naranja);
+}
+
+.cta-fila {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.cta-texto {
+  font-size: clamp(0.75rem, 0.9vw, 0.95rem);
+  line-height: 2;
+  max-width: 620px;
+}
+
 .btn-contacto {
-  display: inline-block;
   transform: rotate(-3deg);
-  font-size: 0.75rem;
-  padding: 14px 22px;
-  margin-left: 60%;
+  font-size: clamp(1rem, 1.3vw, 1.3rem);
+  padding: 16px 22px;
+  margin-right: 8%;
 }
 
 /* ================= FOOTER ================= */
