@@ -18,7 +18,7 @@
     <!-- ================= HEADER ================= -->
     <header class="header">
         <div class="header-top">
-            <a href="#inicio" class="logo">ER</a>
+            <a href="#inicio" class="logo"><img src="imgs/favicon.svg" alt=""></a>
             <nav class="nav">
                 <a href="#proyectos">Proyectos</a>
                 <a href="#sobre-mi">Sobre mí</a>
@@ -72,45 +72,46 @@
             <div class="archivo-grid">
                 <article class="archivo-item">
                     <div class="imagen">
-                        <!-- <img src="img/artwork-liminal.jpg" alt="Artwork Liminal"> -->
+                        <img src="imgs/_img_mock-liminal.jpg">
                     </div>
-                    <a href="#" class="btn btn-chico btn-verde">Artwork</a>
+                        <a href="#" class="btn btn-chico btn-verde">Artwork</a>
                 </article>
 
                 <article class="archivo-item">
                     <div class="imagen">
-                        <!-- <img src="img/prensa.jpg" alt="Prensa y redes"> -->
+                        <img src="imgs/_img_presskit-lit.jpg">
                     </div>
                     <a href="#" class="btn btn-chico btn-verde">Prensa y redes</a>
                 </article>
 
                 <article class="archivo-item">
                     <div class="imagen">
-                        <!-- <img src="img/textiles.jpg" alt="Diseño textil"> -->
+                        <img src="imgs/_img_mock-connor.jpg">
                     </div>
                     <a href="#" class="btn btn-chico btn-verde">Textiles</a>
                 </article>
             </div>
         </section>
 
-        <!-- ================= LOGOS ================= -->
+        <!-- ================= LOGOS SLIDER ================= -->
         <section class="logos">
             <div class="logos-fila">
                 <a href="#" class="btn btn-verde btn-logos">Logos</a>
 
-                <div class="slider" data-intervalo="3000">
+                <div class="slider" data-intervalo="2500">
                     <div class="slider-track">
                         <div class="slide imagen">
-                            <!-- <img src="img/logo-1.jpg" alt="Logo 1"> -->
+                            <img src="imgs/logo-boris-slide.jpg">
                         </div>
                         <div class="slide imagen">
-                            <!-- <img src="img/logo-2.jpg" alt="Logo 2"> -->
+                            <img src="imgs/logo-eich-slide.jpg">
                         </div>
                         <div class="slide imagen">
-                            <!-- <img src="img/logo-3.jpg" alt="Logo 3"> -->
+                            <img src="imgs/logo-indyana-slide.jpg">
                         </div>
-                    </div>
-                </div>
+                        <div class="slide imagen">
+                            <img src="imgs/logo-singuion-slide.jpg">
+                        </div>
             </div>
         </section>
 
@@ -123,7 +124,8 @@
                     Si tenés una idea, una marca que necesita encontrar su identidad<br>
                     o un proyecto que pide una mirada alternativa, escribime!
                 </p>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLScol94fyYgbuhOxNoxN8IXvo68ceXh8l3lz4V_goHPAlmTWXg/viewform" target="_blank" rel="noopener" class="btn btn-verde btn-contacto">Contactate</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScol94fyYgbuhOxNoxN8IXvo68ceXh8l3lz4V_goHPAlmTWXg/viewform"
+                    target="_blank" rel="noopener" class="btn btn-verde btn-contacto">Contactate</a>
             </div>
         </section>
 
@@ -132,34 +134,54 @@
     <div class="footer-line"></div>
 
     <!-- ================= FOOTER ================= -->
-    <footer class="footer">
-        <p class="footer-texto">MADE IN BANFIELD</p>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <p class="footer-texto">MADE IN BANFIELD</p>
     <div class="redes">
-  <a href="#" class="red" aria-label="Instagram">
-    <img src="imgs/LOGO-IG.svg" alt="Instagram">
-  </a>
-  <a href="#" class="red" aria-label="Behance">
-    <img src="imgs/LOGO-BEHANCE.svg" alt="Behance">
-  </a>
-  <a href="#" class="red" aria-label="YouTube">
-    <img src="imgs/LOGO-YT.svg" alt="YouTube">
-  </a>
-</div>
-    </footer>
+      <a href="https://www.instagram.com/boris__store" target="_blank" rel="noopener" class="red" aria-label="Instagram">
+        <img src="imgs/LOGO-IG.svg" alt="Instagram">
+      </a>
+      <a href="https://www.behance.net/_emanuelroman" target="_blank" rel="noopener" class="red" aria-label="Behance">
+        <img src="imgs/LOGO-BEHANCE.svg" alt="Behance">
+      </a>
+      <a href="https://www.youtube.com/@liminal_arg" target="_blank" rel="noopener" class="red" aria-label="YouTube">
+        <img src="imgs/LOGO-YT.svg" alt="YouTube">
+      </a>
+    </div>
+  </div>
+</footer>
 
     <script>
-        // Carrusel automático de logos
-        document.querySelectorAll('.slider').forEach(function (slider) {
-            const track = slider.querySelector('.slider-track');
-            const slides = slider.querySelectorAll('.slide');
-            const intervalo = parseInt(slider.dataset.intervalo, 10) || 3000;
-            let actual = 0;
+      
+  // Carrusel automático de logos (continuo)
+  document.querySelectorAll('.slider').forEach(function (slider) {
+    const track = slider.querySelector('.slider-track');
+    const slides = Array.from(slider.querySelectorAll('.slide'));
+    const total = slides.length;
+    const intervalo = parseInt(slider.dataset.intervalo, 10) || 3000;
 
-            setInterval(function () {
-                actual = (actual + 1) % slides.length;
-                track.style.transform = 'translateX(-' + actual * 100 + '%)';
-            }, intervalo);
+    track.appendChild(slides[0].cloneNode(true));
+
+    let actual = 0;
+
+    setInterval(function () {
+      actual++;
+      track.style.transition = 'transform 0.7s ease-in-out';
+      track.style.transform = 'translateX(-' + actual * 100 + '%)';
+
+      if (actual === total) {
+        track.addEventListener('transitionend', function reiniciar() {
+          track.removeEventListener('transitionend', reiniciar);
+          track.style.transition = 'none';
+          track.style.transform = 'translateX(0)';
+          track.offsetHeight;
+          track.style.transition = '';
+          actual = 0;
         });
+      }
+    }, intervalo);
+  });
     </script>
 
 </body>
