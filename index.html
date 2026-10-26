@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emanuel Roman | Diseño Gráfico</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,9 +20,9 @@
         <div class="header-top">
             <a href="#inicio" class="logo"><img src="imgs/favicon.svg" alt=""></a>
             <nav class="nav">
-                <a href="#proyectos">Proyectos</a>
+                <a href="proyectos.html">Proyectos</a>
                 <a href="#sobre-mi">Sobre mí</a>
-                <a href="#contacto">Contacto</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScol94fyYgbuhOxNoxN8IXvo68ceXh8l3lz4V_goHPAlmTWXg/viewform" target="_blank" rel="noopener">Contacto</a>
             </nav>
         </div>
         <div class="header-line"></div>
@@ -35,8 +35,6 @@
             <img src="imgs/hero-portfolio.jpg" alt="Emanuel Roman">
         </div>
 
-
-
         <div class="hero-caja">
             <div class="hero-texto" id="sobre-mi">
                 <p>
@@ -47,7 +45,6 @@
             </div>
             <a href="#proyectos" class="btn btn-verde hero-boton">Conocé más sobre mí</a>
         </div>
-        </section>
 
         <!-- ================= MARQUESINA VERDE ================= -->
         <div class="marquesina" aria-hidden="true">
@@ -72,23 +69,23 @@
             <div class="archivo-grid">
                 <article class="archivo-item">
                     <div class="imagen">
-                        <img src="imgs/_img_mock-liminal.jpg">
+                        <img src="imgs/_img_mock-liminal.jpg" alt="Artwork Liminal">
                     </div>
-                        <a href="#" class="btn btn-chico btn-verde">Artwork</a>
+                    <a href="proyectos.html" class="btn btn-chico btn-verde">Artwork</a>
                 </article>
 
                 <article class="archivo-item">
                     <div class="imagen">
-                        <img src="imgs/_img_presskit-lit.jpg">
+                        <img src="imgs/_img_presskit-lit.jpg" alt="Prensa y redes">
                     </div>
-                    <a href="#" class="btn btn-chico btn-verde">Prensa y redes</a>
+                    <a href="proyectos.html" class="btn btn-chico btn-verde">Prensa y redes</a>
                 </article>
 
                 <article class="archivo-item">
                     <div class="imagen">
-                        <img src="imgs/_img_mock-connor.jpg">
+                        <img src="imgs/_img_mock-connor.jpg" alt="Diseño textil">
                     </div>
-                    <a href="#" class="btn btn-chico btn-verde">Textiles</a>
+                    <a href="proyectos.html" class="btn btn-chico btn-verde">Textiles</a>
                 </article>
             </div>
         </section>
@@ -96,22 +93,24 @@
         <!-- ================= LOGOS SLIDER ================= -->
         <section class="logos">
             <div class="logos-fila">
-                <a href="#" class="btn btn-verde btn-logos">Logos</a>
+                <a href="proyectos.html" class="btn btn-verde btn-logos">Logos</a>
 
                 <div class="slider" data-intervalo="2500">
                     <div class="slider-track">
                         <div class="slide imagen">
-                            <img src="imgs/logo-boris-slide.jpg">
+                            <img src="imgs/logo-boris-slide.jpg" alt="Logo Boris Store">
                         </div>
                         <div class="slide imagen">
-                            <img src="imgs/logo-eich-slide.jpg">
+                            <img src="imgs/logo-eich-slide.jpg" alt="Logo Eichhornia">
                         </div>
                         <div class="slide imagen">
-                            <img src="imgs/logo-indyana-slide.jpg">
+                            <img src="imgs/logo-indyana-slide.jpg" alt="Logo Indyana">
                         </div>
                         <div class="slide imagen">
-                            <img src="imgs/logo-singuion-slide.jpg">
+                            <img src="imgs/logo-singuion-slide.jpg" alt="Logo Sin Guion">
                         </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -134,54 +133,52 @@
     <div class="footer-line"></div>
 
     <!-- ================= FOOTER ================= -->
-
-<footer class="footer">
-  <div class="footer-inner">
-    <p class="footer-texto">MADE IN BANFIELD</p>
-    <div class="redes">
-      <a href="https://www.instagram.com/boris__store" target="_blank" rel="noopener" class="red" aria-label="Instagram">
-        <img src="imgs/LOGO-IG.svg" alt="Instagram">
-      </a>
-      <a href="https://www.behance.net/_emanuelroman" target="_blank" rel="noopener" class="red" aria-label="Behance">
-        <img src="imgs/LOGO-BEHANCE.svg" alt="Behance">
-      </a>
-      <a href="https://www.youtube.com/@liminal_arg" target="_blank" rel="noopener" class="red" aria-label="YouTube">
-        <img src="imgs/LOGO-YT.svg" alt="YouTube">
-      </a>
-    </div>
-  </div>
-</footer>
+    <footer class="footer">
+        <div class="footer-inner">
+            <p class="footer-texto">MADE IN BANFIELD</p>
+            <div class="redes">
+                <a href="https://www.instagram.com/boris__store" target="_blank" rel="noopener" class="red" aria-label="Instagram">
+                    <img src="imgs/LOGO-IG.svg" alt="Instagram">
+                </a>
+                <a href="https://www.behance.net/_emanuelroman" target="_blank" rel="noopener" class="red" aria-label="Behance">
+                    <img src="imgs/LOGO-BEHANCE.svg" alt="Behance">
+                </a>
+                <a href="https://www.youtube.com/@liminal_arg" target="_blank" rel="noopener" class="red" aria-label="YouTube">
+                    <img src="imgs/LOGO-YT.svg" alt="YouTube">
+                </a>
+            </div>
+        </div>
+    </footer>
 
     <script>
-      
-  // Carrusel automático de logos (continuo)
-  document.querySelectorAll('.slider').forEach(function (slider) {
-    const track = slider.querySelector('.slider-track');
-    const slides = Array.from(slider.querySelectorAll('.slide'));
-    const total = slides.length;
-    const intervalo = parseInt(slider.dataset.intervalo, 10) || 3000;
+        // Carrusel automático de logos (continuo)
+        document.querySelectorAll('.slider').forEach(function (slider) {
+            const track = slider.querySelector('.slider-track');
+            const slides = Array.from(slider.querySelectorAll('.slide'));
+            const total = slides.length;
+            const intervalo = parseInt(slider.dataset.intervalo, 10) || 2500;
 
-    track.appendChild(slides[0].cloneNode(true));
+            track.appendChild(slides[0].cloneNode(true));
 
-    let actual = 0;
+            let actual = 0;
 
-    setInterval(function () {
-      actual++;
-      track.style.transition = 'transform 0.7s ease-in-out';
-      track.style.transform = 'translateX(-' + actual * 100 + '%)';
+            setInterval(function () {
+                actual++;
+                track.style.transition = 'transform 0.7s ease-in-out';
+                track.style.transform = 'translateX(-' + actual * 100 + '%)';
 
-      if (actual === total) {
-        track.addEventListener('transitionend', function reiniciar() {
-          track.removeEventListener('transitionend', reiniciar);
-          track.style.transition = 'none';
-          track.style.transform = 'translateX(0)';
-          track.offsetHeight;
-          track.style.transition = '';
-          actual = 0;
+                if (actual === total) {
+                    track.addEventListener('transitionend', function reiniciar() {
+                        track.removeEventListener('transitionend', reiniciar);
+                        track.style.transition = 'none';
+                        track.style.transform = 'translateX(0)';
+                        track.offsetHeight;
+                        track.style.transition = '';
+                        actual = 0;
+                    });
+                }
+            }, intervalo);
         });
-      }
-    }, intervalo);
-  });
     </script>
 
 </body>

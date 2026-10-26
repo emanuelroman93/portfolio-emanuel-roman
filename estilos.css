@@ -147,7 +147,7 @@ img {
   position: absolute;
   bottom: 90px;
   right: 6%;
-  width: 28%;
+  width: 35%;
   min-width: 260px;
   z-index: 2;
   display: flex;
@@ -513,9 +513,17 @@ img {
   margin-top: 60px;
 }
 
-.prensa-grid .imagen {
-  aspect-ratio: 4 / 5;
+/* Fila superior: 443 x 314 */
+.prensa-grid .imagen:nth-child(-n+3) {
+  aspect-ratio: 443 / 314;
 }
+/* Filas de abajo: 443 x 609 */
+.prensa-grid .imagen {
+  width: 100%;
+  aspect-ratio: 443 / 609;
+}
+
+
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 900px) {
