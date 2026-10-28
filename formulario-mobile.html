@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de contacto | Emanuel Roman</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Share+Tech+Mono&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="estilos-mobile.css">
+</head>
+
+<body>
+
+    <input type="checkbox" id="menu-abierto" class="menu-check">
+
+    <!-- ================= HEADER ================= -->
+    <header class="cabecera">
+        <div class="logo"><img src="imgs-mobile/logo-er-mobile.svg" alt="ER"></div>
+        <label for="menu-abierto" class="boton-menu" aria-label="Abrir menú">
+            <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+                <rect y="6" width="24" height="2" fill="#fff" />
+                <rect y="14" width="24" height="2" fill="#fff" />
+            </svg>
+        </label>
+    </header>
+
+    <!-- ================= MENÚ DESPLEGADO ================= -->
+    <nav class="menu">
+        <div class="menu-cabecera">
+            <div class="logo"><img src="imgs-mobile/logo-er-mobile.svg" alt="ER"></div>
+            <label for="menu-abierto" class="boton-cerrar" aria-label="Cerrar menú">
+                <svg viewBox="0 0 24 24" width="36" height="36" aria-hidden="true">
+                    <path d="M4 4 L20 20 M20 4 L4 20" stroke="#fff" stroke-width="2.5" stroke-linecap="round" />
+                </svg>
+            </label>
+        </div>
+
+        <ul class="menu-lista">
+            <ul class="menu-lista">
+                <li><label for="menu-abierto">Sobre mí</label></li>
+                <li><label for="menu-abierto">Proyectos</label></li>
+                <li><label for="menu-abierto">Contacto</label></li>
+            </ul>
+
+            <p class="epigrafe menu-epigrafe">MADE IN BANFIELD</p>
+    </nav>
+
+    <!-- ================= CONTENIDO ================= -->
+    <main class="contenido">
+        <p class="eyebrow">/FORMULARIO DE CONTACTO</p>
+
+        <form class="formulario" action="#" method="post">
+            <div class="fondo-formulario">
+                <input type="text" name="nombre" class="campo" placeholder="NOMBRE Y APELLIDO">
+                <input type="email" name="email" class="campo" placeholder="E-MAIL">
+                <input type="tel" name="telefono" class="campo" placeholder="TELÉFONO">
+                <textarea name="mensaje" class="campo campo-mensaje"
+                    placeholder="CONTAME BREVEMENTE QUE NECESITAS O TU IDEA Y ME PONDRÉ EN CONTACTO PARA DARTE LA MEJOR RESPUESTA!"></textarea>
+            </div>
+
+            <button type="submit" class="btn-enviar">ENVIAR</button>
+        </form>
+
+        <a class="btn-volver">VOLVER</a>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="pie">
+        <hr class="separador">
+        <div class="redes">
+            <a href="https://www.instagram.com/boris__store" target="_blank" rel="noopener" class="red"
+                aria-label="Instagram">
+                <img src="imgs/LOGO-IG.svg" alt="Instagram">
+            </a>
+            <a href="https://www.behance.net/_emanuelroman" target="_blank" rel="noopener" class="red"
+                aria-label="Behance">
+                <img src="imgs/LOGO-BEHANCE.svg" alt="Behance">
+            </a>
+            <a href="https://www.youtube.com/@liminal_arg" target="_blank" rel="noopener" class="red"
+                aria-label="YouTube">
+                <img src="imgs/LOGO-YT.svg" alt="YouTube">
+            </a>
+        </div>
+        <p class="epigrafe">MADE IN BANFIELD</p>
+    </footer>
+
+</body>
+
+</html>
