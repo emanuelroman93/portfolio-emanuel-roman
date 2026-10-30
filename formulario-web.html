@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de contacto | Emanuel Roman</title>
+    <link rel="icon" href="imgs/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@600;800&family=Space+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+        <div class="header-top">
+            <a href="index.html" class="logo"><img src="imgs/logo-er.svg" alt="ER"></a>
+          <nav class="nav">
+                <a href="proyectos.html">Proyectos</a>
+                <a href="cv.html">Sobre mí</a>
+                <a href="formulario-web.html">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="formulario-pagina">
+
+        <!-- ================= TÍTULO ================= -->
+        <h1 class="cta-titulo formulario-titulo">¿HACEMOS ALGO <span>DISTINTO?</span></h1>
+
+        <!-- ================= FORMULARIO ================= -->
+        <form class="formulario" action="#" method="post">
+            <div class="formulario-caja">
+
+                <div class="campos-contacto">
+                    <input type="text" name="nombre" class="campo" placeholder="NOMBRE Y APELLIDO">
+                    <input type="email" name="email" class="campo" placeholder="E-MAIL">
+                    <input type="tel" name="telefono" class="campo" placeholder="TELÉFONO">
+                </div>
+
+                <textarea name="mensaje" class="campo campo-mensaje" placeholder="Contame brevemente qué necesitas o tu idea y me pondré en contacto con vos para darte la mejor respuesta!"></textarea>
+
+            </div>
+
+            <button type="submit" class="btn btn-verde btn-enviar">Enviar</button>
+        </form>
+
+        <div class="formulario-volver">
+            <a href="index.html" class="btn btn-naranja btn-chico">Volver</a>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <p class="footer-texto">MADE IN BANFIELD</p>
+            <nav class="redes" aria-label="Redes sociales">
+                <a href="https://www.instagram.com/boris__store" target="_blank" rel="noopener" class="red"
+                    aria-label="Instagram">
+                    <img src="imgs/LOGO-IG.svg" alt="Instagram">
+                </a>
+                <a href="https://www.behance.net/_emanuelroman" target="_blank" rel="noopener" class="red"
+                    aria-label="Behance">
+                    <img src="imgs/LOGO-BEHANCE.svg" alt="Behance">
+                </a>
+                <a href="https://www.youtube.com/@liminal_arg" target="_blank" rel="noopener" class="red"
+                    aria-label="YouTube">
+                    <img src="imgs/LOGO-YT.svg" alt="YouTube">
+                </a>
+            </nav>
+        </div>
+    </footer>
