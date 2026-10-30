@@ -11,6 +11,7 @@
         href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@600;800&family=Space+Mono&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="estilos.css">
+    <!--faltó el favicon!!!-->
 </head>
 
 <body>
@@ -21,23 +22,23 @@
             <a href="#inicio" class="logo"><img src="imgs/logo-er.svg"></a>
             <nav class="nav">
                 <a href="proyectos.html">Proyectos</a>
-                <a href="#sobre-mi">Sobre mí</a>
+                <a href="#sobre-mi">Sobre mí</a> <!--y la página del cv qué pasó?-->
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLScol94fyYgbuhOxNoxN8IXvo68ceXh8l3lz4V_goHPAlmTWXg/viewform"
-                    target="_blank" rel="noopener">Contacto</a>
+                    target="_blank" rel="noopener">Contacto</a><!--acordate que tiene que ser el form que dimos en clases y tiene que dirigirse ahí-->
             </nav>
         </div>
-        <div class="header-line"></div>
+        <div class="header-line"></div> <!--en lugar de usar un div podés aplicarlo como border-bottom del header-top-->
     </header>
 
     <main>
 
         <!-- ================= HERO ================= -->
         <div class="hero-img">
-            <img src="imgs/hero-portfolio.jpg" alt="Emanuel Roman">
+            <img src="imgs/hero-portfolio.jpg" alt="Emanuel Roman"> <!--deberías poder hacer esto como texto e imagen, en la devolución te dejo un ejemplo-->
         </div>
 
         <div class="hero-caja">
-            <div class="hero-texto" id="sobre-mi">
+            <div class="hero-texto" id="sobre-mi"> <!--este div está de más, podrías ponerle las mismas class/id a la p y va a funcionar igual-->
                 <p>
                     Me llamo Emanuel Roman, soy diseñador gráfico, profe de Inglés y Licenciado en
                     Gestión Educativa. Pero por sobre todo: <strong>melómano, nostálgico e hincha de Banfield.</strong>
@@ -68,8 +69,8 @@
                 y una personalidad bien definida para que tu proyecto destaque.
             </p>
 
-            <div class="archivo-grid">
-                <article class="archivo-item">
+            <div class="archivo-grid"> <!--el resultado es más lindo con flex porque con grid en pantallas chicas las imagenes se ven cortadas, en cambio de la otra forma podés agregar wrap para que fluya con el tamaño-->
+                <article class="archivo-item"> <!--hay una etiqueta mejor para agrupar imágenes y sus descripciones-->
                     <div class="imagen">
                         <img src="imgs/index-liminal.jpg" alt="Artwork Liminal">
                     </div>
@@ -122,7 +123,7 @@
 
             <div class="cta-fila">
                 <p class="cta-texto">
-                    Si tenés una idea, una marca que necesita encontrar su identidad<br>
+                    Si tenés una idea, una marca que necesita encontrar su identidad<br> <!--no se puede usar br!!-->
                     o un proyecto que pide una mirada alternativa, escribime!
                 </p>
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLScol94fyYgbuhOxNoxN8IXvo68ceXh8l3lz4V_goHPAlmTWXg/viewform"
@@ -132,13 +133,13 @@
 
     </main>
 
-    <div class="footer-line"></div>
+    <div class="footer-line"></div> <!--por un lado, si es del footer debería estar dentro del mismo, por otro lado, se puede resolver con border-top-->
 
     <!-- ================= FOOTER ================= -->
     <footer class="footer">
         <div class="footer-inner">
             <p class="footer-texto">MADE IN BANFIELD</p>
-            <div class="redes">
+            <div class="redes"> <!--ya que esto tecnicamente te deja navegar por otros sitios también podría ser uno-->
                 <a href="https://www.instagram.com/boris__store" target="_blank" rel="noopener" class="red"
                     aria-label="Instagram">
                     <img src="imgs/LOGO-IG.svg" alt="Instagram">

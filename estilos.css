@@ -66,7 +66,7 @@ img {
   padding-bottom: 16px;
 }
 
-.logo {
+.logo { /*en qué afecta esto?*/
   display: block;
   line-height: 0;
 }
@@ -117,7 +117,7 @@ img {
   height: 100%;
 }
 
-.hero-img img {
+.hero-img img { /*en la línea 40 estás estableciendo estos mismos parámetros, además de no ser necesarioa*/
   display: block;
   width: 100%;
   height: auto;
@@ -149,13 +149,13 @@ img {
   width: 35%;
   min-width: 260px;
   z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  display: flex; /*no es necesario*/
+  flex-direction: column; /*no es necesario*/
+  align-items: flex-end; /*no es necesario*/
 }
 
 .hero-texto {
-  width: 100%;
+  width: 100%; /*no es necesario*/
   background: #e0dedb;
   color: var(--negro);
   padding: 36px 44px;
@@ -172,12 +172,12 @@ img {
 .hero-audio {
   position: absolute;
   top: 100%;
-  right: 0;
+  right: 0; /*no es necesario*/
   margin-top: 25px;
   width: 340px;
   max-width: 90vw;
   z-index: 3;
-  border-radius: 999px;
+  border-radius: 999px; /*no es necesario*/
   filter: invert(1);
 }
 /* ================= BOTONES ================= */
@@ -277,7 +277,7 @@ img {
 /* ================= ARCHIVO VISUAL ================= */
 .archivo {
   padding: 90px 12.5% 80px;
-  position: relative;
+  position: relative; /*es necesario?*/
 }
 
 .eyebrow {
@@ -292,7 +292,7 @@ img {
   font-weight: 800;
   font-size: clamp(2.8rem, 5vw, 5.5rem);
   line-height: 1;
-  color: var(--crema);
+  color: var(--crema); /*este color se hereda directamente desde el body, acá está repetido y no es correcto*/
   text-shadow: 5px 5px 0 var(--naranja);
   margin-bottom: 40px;
 }
@@ -306,7 +306,7 @@ img {
   font-size: clamp(0.75rem, 0.9vw, 0.95rem);
   line-height: 1.5;
   color: var(--crema);
-  max-width: 80%;
+  max-width: 80%; /*acá te va a convenir que el valor sea una medida fija porque en mi pantalla la línea de texto sigue siendo enorme*/
   margin-bottom: 60px;
 }
 
@@ -480,8 +480,8 @@ img {
 }
 
 .seccion-titulo {
-  font-family: var(--fuente-texto);
-  font-weight: 700;
+  font-family: var(--fuente-texto); /*esto está repetido*/
+  font-weight: 700; /*repetido*/
   font-size: clamp(1rem, 1.4vw, 1.4rem);
   text-transform: uppercase;
   margin-bottom: 24px;
@@ -494,7 +494,7 @@ img {
 }
 
 .logos-grid {
-  display: grid;
+  display: grid; /*mucho grid poco flex*/
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
   margin-top: 60px;
@@ -507,7 +507,7 @@ img {
 .logo-card figcaption {
   margin-top: 22px;
   text-align: center;
-  font-size: clamp(0.5rem, 0.6vw, 0.65rem);
+  font-size: clamp(0.5rem, 0.6vw, 0.65rem); /*mi abuela dice que el tamaño está muy chiquito*/
   text-transform: uppercase;
 }
 
