@@ -45,7 +45,6 @@ img {
   object-fit: cover;
 }
 
-
 .imagen {
   background: var(--gris);
   overflow: hidden;
@@ -95,7 +94,6 @@ img {
   text-decoration-color: var(--blanco);
   text-underline-offset: 6px;
 }
-
 
 /* ================= HERO ================= */
 .hero {
@@ -164,19 +162,6 @@ img {
   width: 100%;
   filter: invert(1);
 }
-
-/* Ajuste de caja para cuando se achique la pantalla*/
-@media (max-width: 900px) {
-  .hero-caja {
-    position: relative;
-    bottom: auto;
-    right: auto;
-    width: 90%;
-    min-width: 0;
-    margin: 24px auto 0;
-  }
-}
-
 
 /* ================= BOTONES ================= */
 .btn {
@@ -525,43 +510,7 @@ img {
   object-fit: contain;
 }
 
-/* ================= RESPONSIVE ================= */
-@media (max-width: 900px) {
-  .hero-caja {
-    width: 60%;
-    min-width: 0;
-  }
-
-  .identidad-fila {
-    grid-template-columns: 1fr;
-  }
-
-  .btn-identidad,
-  .slider {
-    grid-column: auto;
-  }
-
-  .btn-contacto {
-    margin-right: 0;
-  }
-}
-
-@media (max-width: 600px) {
-  .nav {
-    gap: 16px;
-  }
-
-  .nav a {
-    font-size: 0.6rem;
-  }
-
-  .marquesina-track span {
-    font-size: 0.9rem;
-  }
-}
-
 /* ================= FORMULARIO (MOBILE) ================= */
-
 .pagina-formulario {
   max-width: 430px;
   min-height: 100vh;
@@ -665,7 +614,7 @@ img {
   margin: 24px 0;
 }
 
-/* ---------- Formulario ---------- */
+/* ---------- Formulario (mobile) ---------- */
 .formulario {
   width: 100%;
   display: flex;
@@ -776,9 +725,7 @@ img {
   text-align: center;
 }
 
-
 /* ================= PÁGINA SOBRE MÍ (CV) ================= */
-
 .cv {
   width: 100%;
   max-width: 1100px;
@@ -788,7 +735,6 @@ img {
   flex-direction: column;
   gap: 80px;
 }
-
 
 .cv-encabezado {
   position: relative;
@@ -808,7 +754,6 @@ img {
   top: 0;
   right: 0;
 }
-
 
 .cv-fila-superior {
   display: grid;
@@ -843,11 +788,9 @@ img {
   text-wrap: pretty;
 }
 
-
 .cv-lista li+li {
   margin-top: 12px;
 }
-
 
 .cv-habilidades {
   display: flex;
@@ -879,23 +822,6 @@ img {
   flex: 0 0 auto;
 }
 
-@media (max-width: 900px) {
-  .cv-fila-superior {
-    grid-template-columns: 1fr;
-  }
-
-  .cv-foto {
-    width: 100%;
-    max-width: 220px;
-    margin: 0 auto;
-  }
-
-  .cv-habilidades {
-    justify-content: center;
-  }
-}
-
-
 /* ================= PÁGINA FORMULARIO (WEB) ================= */
 .formulario-pagina {
   max-width: 1100px;
@@ -906,7 +832,6 @@ img {
   align-items: center;
   gap: 60px;
 }
-
 
 .formulario-titulo {
   align-self: center;
@@ -921,7 +846,6 @@ img {
   align-items: center;
   gap: 40px;
 }
-
 
 .formulario-caja {
   width: 100%;
@@ -973,30 +897,91 @@ img {
   text-align: left;
 }
 
-
 .btn-enviar {
   font-size: 1rem;
   padding: 14px 40px;
   cursor: pointer;
 }
 
-
 .formulario-volver {
   align-self: flex-end;
   margin-top: -20px;
 }
 
+/* ================= RESPONSIVE ================= */
 @media (max-width: 900px) {
+  .hero-caja {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    width: 60%;
+    min-width: 0;
+    margin: 24px auto 0;
+  }
+
+  .identidad-fila {
+    grid-template-columns: 1fr;
+  }
+
+  .btn-identidad,
+  .slider {
+    grid-column: auto;
+  }
+
+  .btn-contacto {
+    margin-right: 0;
+  }
+
+  .cv-fila-superior {
+    grid-template-columns: 1fr;
+  }
+
+  .cv-foto {
+    width: 100%;
+    max-width: 220px;
+    margin: 0 auto;
+  }
+
+  .cv-habilidades {
+    justify-content: center;
+  }
+
   .formulario-caja {
     grid-template-columns: 1fr;
     padding: 32px;
   }
 }
 
-@media (max-width: 900px) {
-  .hero-caja {
-    width: 60%;
-    min-width: 0;
-    bottom: 10%;
+@media (max-width: 600px) {
+  .nav {
+    gap: 16px;
+  }
+
+  .nav a {
+    font-size: 0.6rem;
+  }
+
+  .marquesina-track span {
+    font-size: 0.9rem;
+  }
+
+  .hero-titulo {
+    white-space: normal;
+    font-size: 16vw;
+  }
+
+  .logos-grid,
+  .textiles-grid,
+  .prensa-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .seccion-texto {
+    max-width: 100%;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    gap: 24px;
   }
 }
